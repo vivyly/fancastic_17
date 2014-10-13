@@ -48,6 +48,12 @@ class Common(Configuration):
     LOCAL_APPS = (
         'users',  # custom users app
         # Your stuff: custom apps go here
+        'common',
+        'pictures',
+        'fan',
+        'fancast',
+        'titles',
+        'votes',
     )
 
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -112,7 +118,16 @@ class Common(Configuration):
 
     # DATABASE CONFIGURATION
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
-    DATABASES = values.DatabaseURLValue('postgres://localhost/fancastic_17')
+    #DATABASES = values.DatabaseURLValue('postgres://localhost/fancastic_17')
+    DATABASE = {
+        'defautl' : {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'fancastic_db',
+            'USER': os.environ.get('FANCASTIC17_USER',''),
+            'PASSWORD': os.environ.get('FANCASTIC17_PASSWORD',''),
+            'HOST': 'localhost',
+        }
+    }
     # END DATABASE CONFIGURATION
 
     # CACHING
