@@ -1,0 +1,1 @@
+web: gunicorn --pythonpath="$PWD/fancastic_17" wsgi:application
