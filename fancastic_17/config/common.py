@@ -42,6 +42,7 @@ class Common(Configuration):
         'allauth',  # registration
         'allauth.account',  # registration
         'allauth.socialaccount',  # registration
+        'django_nose',
     )
 
     # Apps specific for this project go here.
@@ -52,6 +53,7 @@ class Common(Configuration):
         'pictures',
         'fan',
         'fancast',
+        'actors',
         'titles',
         'votes',
     )
@@ -119,8 +121,8 @@ class Common(Configuration):
     # DATABASE CONFIGURATION
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
     #DATABASES = values.DatabaseURLValue('postgres://localhost/fancastic_17')
-    DATABASE = {
-        'defautl' : {
+    DATABASES = {
+        'default' : {
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'fancastic_db',
             'USER': os.environ.get('FANCASTIC17_USER',''),

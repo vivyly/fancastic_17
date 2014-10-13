@@ -42,3 +42,10 @@ class Local(Common):
     # end django-debug-toolbar
 
     # Your local stuff: Below this line define 3rd party libary settings
+    TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+    #NOSE_ARGS = [
+    #    '--with-coverage',
+    #    '--cover-package=myapp1, myapp2',
+    #    '--cover-inclusive',
+    #]
