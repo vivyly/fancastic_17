@@ -53,7 +53,9 @@ class Common(Configuration):
         'pictures',
         'fan',
         'fancast',
-        'actors',
+        'professional',
+        'character',
+        'role',
         'titles',
         'votes',
     )

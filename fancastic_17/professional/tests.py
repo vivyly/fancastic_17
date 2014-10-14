@@ -1,11 +1,11 @@
 import nose.tools as nt
 import factory
 from django.test import TestCase
-from actors.models import Actor
+from .models import Professional
 
 
-class ActorFactory(factory.DjangoModelFactory):
-    FACTORY_FOR = Actor
+class ProfessionalFactory(factory.DjangoModelFactory):
+    FACTORY_FOR = Professional
     fullname = "Maisie Williams"
     height = "5'0\""
     is_alive = True
@@ -18,10 +18,10 @@ class ActorFactory(factory.DjangoModelFactory):
     imdb = "http://www.imdb.com/name/nm3586035/"
 
 
-class TestActorCreation(TestCase):
+class TestProfessionalCreation(TestCase):
 
     def setUp(self):
-        self.actor1 = ActorFactory.create()
+        self.actor1 = ProfessionalFactory.create()
 
     def tearDown(self):
         self.actor1.delete()
@@ -37,7 +37,3 @@ class TestActorCreation(TestCase):
         nt.eq_(self.actor1.nationality, "British")
         nt.eq_(self.actor1.url, "http://en.wikipedia.org/wiki/Maisie_Williams")
         nt.eq_(self.actor1.imdb, "http://www.imdb.com/name/nm3586035/")
-
-
-#class RoleFactory(factory.DjangoModelFactory):
-#   pass

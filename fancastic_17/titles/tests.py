@@ -1,7 +1,7 @@
 import nose.tools as nt
 import factory
 from django.test import TestCase
-from titles.models import Title
+from .models import Title
 
 
 class TitleFactory(factory.DjangoModelFactory):
