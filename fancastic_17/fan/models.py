@@ -25,8 +25,8 @@ class FanUser(User):
         ------------------------
         manager is UserManager()
     """
+    slug           = models.SlugField(max_length=50, null=False)
     created        = models.DateTimeField(default=timezone.now)
     updated        = AutoDateTimeField(default=timezone.now)
-    slug           = models.SlugField(max_length=50, null=False)
     is_contributor = models.BooleanField(default=False)
     desc           = models.TextField(blank=True)

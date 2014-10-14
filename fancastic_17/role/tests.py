@@ -4,9 +4,9 @@ from django.test import TestCase
 
 from professional.models import Professional
 from character.models import Character
-from title.models import Adaptation
+from titles.models import Adaptation
 
-from .models import Role
+from role.models import Role
 
 class RoleFactory(factory.DjangoModelFactory):
     FACTORY_FOR = Role

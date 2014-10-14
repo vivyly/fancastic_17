@@ -1,7 +1,7 @@
 import nose.tools as nt
 import factory
 from django.test import TestCase
-from .models import Professional
+from professional.models import Professional
 
 
 class ProfessionalFactory(factory.DjangoModelFactory):
